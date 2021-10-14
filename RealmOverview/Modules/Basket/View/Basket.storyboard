@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basket-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BasketViewController" id="Y6W-OH-hqX" customClass="BasketViewController" customModule="RealmOverview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Ut-aS-TjS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="751"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="ItE-Yq-4FG"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="6Dg-Ea-3KK"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-M1-O5J">
+                                <rect key="frame" x="154" y="814" width="106" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QFh-Qs-mhi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Process order"/>
+                                <connections>
+                                    <action selector="didTapProcessButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0z5-8j-lur"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ut-aS-TjS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6rT-5i-ghS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dOr-M1-O5J" secondAttribute="bottom" constant="8" id="Nvg-4E-Wh3"/>
+                            <constraint firstItem="1Ut-aS-TjS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YNQ-te-gnC"/>
+                            <constraint firstItem="1Ut-aS-TjS" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="b1b-IB-vSo"/>
+                            <constraint firstItem="dOr-M1-O5J" firstAttribute="top" secondItem="1Ut-aS-TjS" secondAttribute="bottom" constant="19" id="cfn-Dr-yls"/>
+                            <constraint firstItem="dOr-M1-O5J" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="klV-q2-8Dg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Basket" largeTitleDisplayMode="always" id="qvZ-Wc-03p"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="1Ut-aS-TjS" id="bzM-WF-8Od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.73913043478262" y="5.3571428571428568"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
